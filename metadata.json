@@ -1,0 +1,6 @@
+{
+  "name": "MUSHAY | Luxury Clothing E-Commerce",
+  "description": "Exclusive MUSHAY haute couture clothing brand featuring luxury collections, complete checkout, live order tracking, and administrative dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

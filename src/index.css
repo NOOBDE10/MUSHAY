@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :root {
+    /* Exact Color Palette taken from Logo & Brand Guide */
+    --color-black: #111111;
+    --color-rose-brown: #A0645A;
+    --color-terracotta: #A96B62;
+    --color-rust: #963800;
+    --color-rust-red: #8B2E0B;
+    --color-tan: #C0AC8A;
+    --color-cream: #F5EFE6;
+    --color-cream-card: #FAF7F2;
+
+    --brand-beige: #C0AC8A;
+    --brand-cream: #F5EFE6;
+    --brand-cream-soft: #FAF7F2;
+    --brand-black: #111111;
+    --brand-charcoal: #1C1008;
+    --brand-rust: #963800;
+    --brand-terracotta: #A96B62;
+    --brand-rose: #A0645A;
+  }
+
+  body {
+    background-color: #F5EFE6;
+    color: #111111;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.03em;
+  }
+
+  .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Luxury Editorial Accents */
+.text-rust-gradient {
+  background: linear-gradient(135deg, #111111 0%, #963800 60%, #A96B62 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #111111 0%, #963800 50%, #A96B62 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-rust-gradient {
+  background: linear-gradient(135deg, #963800 0%, #8B2E0B 100%);
+}
+
+.bg-beige-card {
+  background-color: #FAF7F2;
+  border: 0.5px solid rgba(169, 107, 98, 0.25);
+  border-radius: 20px;
+}
+
+.deal-card-20 {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(17, 17, 17, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.deal-card-20:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -6px rgba(150, 56, 0, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A96B62;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #963800;
+}
+
+/* Fluid Keyframe Animations across the site */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.92;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: floatSlow 3s ease-in-out infinite;
+}
+
+.animate-subtlePulse {
+  animation: subtlePulse 2.5s ease-in-out infinite;
+}
+
+
+
